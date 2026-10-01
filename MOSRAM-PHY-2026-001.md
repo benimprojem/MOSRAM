@@ -24,19 +24,19 @@ olarak kabul edilir.
 
 MOSRAM hücresinde veri, MOSFET gate'inde bulunan elektriksel yük ile temsil edilir.
 
-\[
+$$\[
 0\rightarrow Q_G\approx0
-\]
+\]$$
 
-\[
+$$\[
 1\rightarrow Q_G>0
-\]
+\]$$
 
 Okuma sırasında gate yeniden sürülmez ve drain-source kanalından okuma akımı geçirilmez.
 
 Dolayısıyla temel okuma işlemi:
 
-\[
+$$\[
 \boxed{
 Q_G
 \rightarrow
@@ -48,17 +48,17 @@ V_{probe}
 \rightarrow
 Sense
 }
-\]
+\]$$
 
 şeklindedir.
 
 Bu nedenle okuma işlemi hücrenin durumunu değiştirmemelidir:
 
-\[
+$$\[
 \boxed{
 READ(Q_G)=Q_G
 }
-\]
+\]$$
 
 Bu özellik sağlanabilirse DRAM'deki destructive-read/restore yaklaşımına ihtiyaç kalmaz.
 
@@ -72,9 +72,9 @@ Burada iki farklı ölçek kullanılmalıdır:
 
 ### Kontrol elektroniği
 
-\[
+$$\[
 \boxed{5-7\,nm}
-\]
+\]$$
 
 - sense amplifier
 - decoder
@@ -86,9 +86,9 @@ Burada iki farklı ölçek kullanılmalıdır:
 
 ### MOSRAM bellek hücresi
 
-\[
+$$\[
 \boxed{5-30\,nm\ aralığında\ optimize\ edilebilir}
-\]
+\]$$
 
 MOSFET'in fiziksel olarak 5 nm sınıfında olması zorunlu değildir.
 
@@ -106,15 +106,15 @@ TSMC'nin N5 sürecinde 0.021 µm² SRAM hücresinin gösterilmiş olması, 5 nm 
 
 Önerilen başlangıç:
 
-\[
+$$\[
 A_G=20\times20\,nm^2
-\]
+\]$$
 
 ve alternatif:
 
-\[
+$$\[
 A_G=30\times30\,nm^2
-\]
+\]$$
 
 olabilir.
 
@@ -149,9 +149,9 @@ Burada üst prob gate ile elektriksel olarak temas etmez.
 
 Dolayısıyla:
 
-\[
+$$\[
 I_{probe\rightarrow gate}=0
-\]
+\]$$
 
 olması hedeflenir.
 
@@ -163,28 +163,28 @@ Prob yalnızca elektrik alan üzerinden gate durumunu algılar.
 
 Bir gate'in kapasitesi:
 
-\[
+$$\[
 C_G
-\]
+\]$$
 
 olarak tanımlansın.
 
 Gate üzerinde \(N_e\) elektron bulunduğunda:
 
-\[
+$$\[
 Q_G=N_e e
-\]
+\]$$
 
 olur.
 
 Gate gerilim değişimi:
 
-\[
+$$\[
 \Delta V_G=
 \frac{Q_G}{C_G}
 =
 \frac{N_e e}{C_G}
-\]
+\]$$
 
 şeklindedir.
 
@@ -196,50 +196,50 @@ Bu denklem MOSRAM'ın temel denklemidir.
 
 Tek elektron için:
 
-\[
+$$\[
 N_e=1
-\]
+\]$$
 
 ve:
 
-\[
+$$\[
 \Delta V_G=\frac{e}{C_G}
-\]
+\]$$
 
 olur.
 
 Örneğin:
 
-\[
+$$\[
 C_G=10\,aF
-\]
+\]$$
 
 ise:
 
-\[
+$$\[
 \Delta V_G
 =
 \frac{1.602\times10^{-19}}
 {10\times10^{-18}}
-\]
+\]$$
 
-\[
+$$\[
 \boxed{\Delta V_G\approx16\,mV}
-\]
+\]$$
 
 çıkar.
 
 Eğer:
 
-\[
+$$\[
 C_G=5\,aF
-\]
+\]$$
 
 olursa:
 
-\[
+$$\[
 \boxed{\Delta V_G\approx32\,mV}
-\]
+\]$$
 
 olur.
 
@@ -247,21 +247,21 @@ Dolayısıyla tek elektron prensipte ölçülebilir bir gate potansiyel değişi
 
 Ancak burada önemli bir ayrım vardır:
 
-\[
+$$\[
 \boxed{
 \text{tek elektron algılama sınırı}
 \neq
 \text{normal çalışma yükü}
 }
-\]
+\]$$
 
 MOSRAM'ın gerçek çalışma durumunda tek elektronla sınırlanmak zorunda değiliz.
 
 Örneğin:
 
-\[
+$$\[
 N_e=10
-\]
+\]$$
 
 ise sinyal yaklaşık 10 kat büyür.
 
@@ -273,54 +273,54 @@ Gate alanı büyüdükçe gate kapasitesi de artar.
 
 Basitleştirilmiş olarak:
 
-\[
+$$\[
 C_G\propto A_G
-\]
+\]$$
 
 olduğundan:
 
-\[
+$$\[
 \Delta V_G=
 \frac{N_e e}{C_G}
-\]
+\]$$
 
 nedeniyle büyük gate:
 
-\[
+$$\[
 \Delta V_G\downarrow
-\]
+\]$$
 
 oluşturur.
 
 Fakat büyük gate'in avantajı:
 
-\[
+$$\[
 N_{max}\uparrow
-\]
+\]$$
 
 ve:
 
-\[
+$$\[
 \text{yük toleransı}\uparrow
-\]
+\]$$
 
 olmasıdır.
 
 Bu nedenle MOSRAM için optimum nokta:
 
-\[
+$$\[
 \boxed{
 \text{minimum gate alanı}
 }
-\]
+\]$$
 
 değil,
 
-\[
+$$\[
 \boxed{
 \text{yeterli sinyal + yeterli üretim marjı + düşük parazit}
 }
-\]
+\]$$
 
 veren gate alanıdır.
 
@@ -332,41 +332,41 @@ Bu nedenle ilk prototipte 5 nm fiziksel sınıra zorlanmış gate yerine 20–30
 
 Prob ile gate arasındaki kapasite:
 
-\[
+$$\[
 C_{GP}
 =
 \frac{\epsilon_0\epsilon_r A_{probe}}{d}
-\]
+\]$$
 
 ile yaklaşık olarak modellenebilir.
 
 Burada:
 
-- \(A_{probe}\): etkin prob alanı
-- \(d\): gate-prob yalıtkan kalınlığı
-- \(\epsilon_r\): yalıtkanın bağıl dielektrik sabiti
+- $$\(A_{probe}\)$$: etkin prob alanı
+- $$\(d\)$$: gate-prob yalıtkan kalınlığı
+- $$\(\epsilon_r\)$$: yalıtkanın bağıl dielektrik sabiti
 
 dir.
 
 Örnek:
 
-\[
+$$\[
 A_{probe}=20\times20\,nm^2
-\]
+\]$$
 
-\[
+$$\[
 d=5\,nm
-\]
+\]$$
 
-\[
+$$\[
 \epsilon_r=7
-\]
+\]$$
 
 alınırsa:
 
-\[
+$$\[
 C_{GP}\approx4.96\,aF
-\]
+\]$$
 
 elde edilir.
 
@@ -378,15 +378,15 @@ Bu değer gate'in tamamının kapasitansı değil, **gate-prob kuplaj kapasitesi
 
 Gerçek çipte:
 
-\[
+$$\[
 C_{total}\neq C_{GP}
-\]
+\]$$
 
 olacaktır.
 
 Daha gerçekçi model:
 
-\[
+$$\[
 \boxed{
 C_{sense}
 =
@@ -402,15 +402,15 @@ C_{neighbor}
 +
 C_{input}
 }
-\]
+\]$$
 
 şeklindedir.
 
 Burada özellikle:
 
-\[
+$$\[
 C_{neighbor}
-\]
+\]$$
 
 önemlidir.
 
@@ -418,11 +418,11 @@ C_{neighbor}
 
 Bu nedenle ilk tasarım hedefi:
 
-\[
+$$\[
 \boxed{
 C_{neighbor}\ll C_{GP}
 }
-\]
+\]$$
 
 olmalıdır.
 
@@ -434,58 +434,58 @@ Gate'teki gerilim değişiminin probda tamamı görülmez.
 
 Kuplaj katsayısını:
 
-\[
+$$\[
 \alpha
-\]
+\]$$
 
 olarak tanımlayalım.
 
-\[
+$$\[
 0<\alpha<1
-\]
+\]$$
 
 olur.
 
 Yaklaşık prob sinyali:
 
-\[
+$$\[
 \boxed{
 \Delta V_{probe}
 \approx
 \alpha
 \frac{N_e e}{C_G}
 }
-\]
+\]$$
 
 şeklindedir.
 
 Örneğin:
 
-\[
+$$\[
 C_G=10\,aF
-\]
+\]$$
 
-\[
+$$\[
 N_e=10
-\]
+\]$$
 
-\[
+$$\[
 \alpha=0.2
-\]
+\]$$
 
 ise:
 
-\[
+$$\[
 \Delta V_{probe}
 \approx
 0.2\times160\,mV
-\]
+\]$$
 
-\[
+$$\[
 \boxed{
 \Delta V_{probe}\approx32\,mV
 }
-\]
+\]$$
 
 olur.
 
@@ -497,44 +497,44 @@ Bu artık sense amplifier açısından çok daha rahat bir sinyaldir.
 
 Kapasitif sistemlerde temel termal gürültü ölçeği:
 
-\[
+$$\[
 V_n\approx
 \sqrt{\frac{kT}{C}}
-\]
+\]$$
 
 ile ifade edilebilir.
 
 300 K'de:
 
-\[
+$$\[
 kT\approx4.14\times10^{-21}J
-\]
+\]$$
 
 olduğundan, örneğin:
 
-\[
+$$\[
 C=0.5\,fF
-\]
+\]$$
 
 için:
 
-\[
+$$\[
 V_n
 \approx
 2.9\,mV
-\]
+\]$$
 
 civarındadır.
 
 Bu nedenle 32 mV seviyesinde bir sinyal:
 
-\[
+$$\[
 SNR\approx11
-\]
+\]$$
 
 mertebesinde olabilir.
 
-Bu yalnızca termal \(kT/C\) gürültüsünü içeren idealize edilmiş bir tahmindir.
+Bu yalnızca termal $\(kT/C\)$ gürültüsünü içeren idealize edilmiş bir tahmindir.
 
 Gerçek sistemde:
 
@@ -555,35 +555,35 @@ Dolayısıyla gerçek SNR bundan daha düşük olacaktır.
 
 Tek elektron:
 
-\[
+$$\[
 N_e=1
-\]
+\]$$
 
 olduğunda:
 
-\[
+$$\[
 \Delta V_{probe}
 =
 \alpha\frac{e}{C_G}
-\]
+\]$$
 
 olur.
 
 Örneğin:
 
-\[
+$$\[
 C_G=10\,aF
-\]
+\]$$
 
-\[
+$$\[
 \alpha=0.2
-\]
+\]$$
 
 ise:
 
-\[
+$$\[
 \Delta V_{probe}\approx3.2\,mV
-\]
+\]$$
 
 çıkar.
 
@@ -591,11 +591,11 @@ Bu değer 0.5 fF toplam sense kapasitesindeki yaklaşık 2.9 mV termal gürült�
 
 Dolayısıyla:
 
-\[
+$$\[
 \boxed{
 1\ elektron
 }
-\]
+\]$$
 
 bu parametrelerle **teorik algılama sınırına yakın** olur.
 
@@ -603,17 +603,17 @@ Bu nedenle normal MOSRAM çalışma durumunda daha fazla yük kullanmak daha do�
 
 Örneğin:
 
-\[
+$$\[
 N_e=10-100
-\]
+\]$$
 
 aralığı çok daha yüksek SNR sağlayabilir.
 
 Tek elektron ise:
 
-\[
+$$\[
 \boxed{\text{minimum algılama sınırı}}
-\]
+\]$$
 
 olarak tutulabilir.
 
@@ -623,9 +623,9 @@ olarak tutulabilir.
 
 Yalıtkanı inceltmek:
 
-\[
+$$\[
 C_{GP}\uparrow
-\]
+\]$$
 
 yapar.
 
@@ -633,9 +633,9 @@ Bu kuplajı artırır.
 
 Fakat:
 
-\[
+$$\[
 d\downarrow
-\]
+\]$$
 
 oldukça:
 
@@ -647,53 +647,53 @@ oldukça:
 
 Dolayısıyla teorik olarak:
 
-\[
+$$\[
 d\rightarrow0
-\]
+\]$$
 
 istenmez.
 
 İlk tasarım taraması için:
 
-\[
+$$\[
 \boxed{
 d=3,\ 4,\ 5,\ 6,\ 8,\ 10\,nm
 }
-\]
+\]$$
 
 aralıklarının simülasyonu yapılmalıdır.
 
 Bunun sonucunda:
 
-\[
+$$\[
 SNR(d)
-\]
+\]$$
 
 ve:
 
-\[
+$$\[
 t_{sense}(d)
-\]
+\]$$
 
 eğrileri çıkarılmalıdır.
 
 Optimum nokta:
 
-\[
+$$\[
 \boxed{
 \max_d\left[
 \frac{SNR(d)}{t_{sense}(d)}
 \right]
 }
-\]
+\]$$
 
 veya daha doğru olarak çok kriterli:
 
-\[
+$$\[
 \boxed{
 SNR\ge SNR_{min}
 }
-\]
+\]$$
 
 koşulunu sağlayan en hızlı \(d\) değeri olacaktır.
 
@@ -703,59 +703,59 @@ koşulunu sağlayan en hızlı \(d\) değeri olacaktır.
 
 Sense devresinin ilk RC modeli:
 
-\[
+$$\[
 t_{RC}=R_{sense}C_{total}
-\]
+\]$$
 
 şeklindedir.
 
 Fakat güvenilir dijital karar için:
 
-\[
+$$\[
 t_{sense}=K\,R_{sense}C_{total}
-\]
+\]$$
 
 alınabilir.
 
 Burada:
 
-\[
+$$\[
 K\approx3-10
-\]
+\]$$
 
 aralığında tasarım marjı olarak incelenebilir.
 
 Örneğin:
 
-\[
+$$\[
 R_{sense}=2\,k\Omega
-\]
+\]$$
 
 ve:
 
-\[
+$$\[
 C_{total}=0.5\,fF
-\]
+\]$$
 
 ise:
 
-\[
+$$\[
 t_{RC}=1\,ps
-\]
+\]$$
 
 olur.
 
-\[
+$$\[
 K=5
-\]
+\]$$
 
 alınırsa:
 
-\[
+$$\[
 \boxed{
 t_{sense}\approx5\,ps
 }
-\]
+\]$$
 
 elde edilir.
 
@@ -767,7 +767,7 @@ Bu **hücrenin fiziksel sense zamanı**dır.
 
 Çip düzeyinde:
 
-\[
+$$\[
 t_{cycle}
 =
 t_{address}
@@ -781,7 +781,7 @@ t_{sense}
 t_{latch}
 +
 t_{routing}
-\]
+\]$$
 
 olmalıdır.
 
@@ -800,11 +800,11 @@ olmalıdır.
 
 Bu durumda:
 
-\[
+$$\[
 f_{MOSRAM}
 \approx
 12-21\,GHz
-\]
+\]$$
 
 mertebesinde bir mimari hedef ortaya çıkar.
 
@@ -816,17 +816,17 @@ Bu değer **fiziksel olarak doğrulanmış MOSRAM frekansı değildir**; yukarı
 
 7 nm'de benzer bir bütçede:
 
-\[
+$$\[
 t_{cycle}\approx60-100\,ps
-\]
+\]$$
 
 hedeflenebilir.
 
 Dolayısıyla:
 
-\[
+$$\[
 f\approx10-16.7\,GHz
-\]
+\]$$
 
 mertebesi ilk araştırma hedefi olabilir.
 
@@ -834,19 +834,19 @@ Burada 5 nm ile 7 nm arasındaki farkın MOSRAM hücresinde dramatik olması ger
 
 Çünkü hücreyi:
 
-\[
+$$\[
 20-30\,nm
-\]
+\]$$
 
 gibi daha büyük tasarlayabiliriz.
 
 Asıl avantaj 5 nm'de:
 
-\[
+$$\[
 \boxed{
 sense/decoder/controller
 }
-\]
+\]$$
 
 alanının küçülmesi ve daha fazla paralel kanalın aynı alan içine yerleştirilebilmesidir.
 
@@ -856,9 +856,9 @@ alanının küçülmesi ve daha fazla paralel kanalın aynı alan içine yerleş
 
 MOSRAM'ın temel mimari hedefi:
 
-\[
+$$\[
 \boxed{64\ bit/cycle}
-\]
+\]$$
 
 olarak alınabilir.
 
@@ -879,17 +879,17 @@ olarak alınabilir.
 
 Burada:
 
-\[
+$$\[
 64bit=8byte
-\]
+\]$$
 
 olduğu için:
 
-\[
+$$\[
 \boxed{
 BW=8f
 }
-\]
+\]$$
 
 olur.
 
@@ -899,55 +899,55 @@ olur.
 
 ### Muhafazakâr senaryo
 
-\[
+$$\[
 t_{cycle}=100ps
-\]
+\]$$
 
-\[
+$$\[
 f=10GHz
-\]
+\]$$
 
-\[
+$$\[
 BW=10\times8
-\]
+\]$$
 
-\[
+$$\[
 \boxed{80\,GB/s}
-\]
+\]$$
 
 ### Orta senaryo
 
-\[
+$$\[
 t_{cycle}=70ps
-\]
+\]$$
 
-\[
+$$\[
 f\approx14.3GHz
-\]
+\]$$
 
-\[
+$$\[
 \boxed{114\,GB/s}
-\]
+\]$$
 
 ### İyileştirilmiş senaryo
 
-\[
+$$\[
 t_{cycle}=50ps
-\]
+\]$$
 
-\[
+$$\[
 f=20GHz
-\]
+\]$$
 
-\[
+$$\[
 \boxed{160\,GB/s}
-\]
+\]$$
 
 Burada her değer:
 
-\[
+$$\[
 \boxed{8byte/cycle}
-\]
+\]$$
 
 üzerinden hesaplanmaktadır.
 
@@ -957,35 +957,35 @@ Burada her değer:
 
 Dört adet 64-bit paralel blok:
 
-\[
+$$\[
 4\times64=256bit
-\]
+\]$$
 
 olur.
 
 Bir cycle'da:
 
-\[
+$$\[
 256bit=32byte
-\]
+\]$$
 
 aktarılır.
 
 10 GHz'de:
 
-\[
+$$\[
 BW=32\times10^{10}
-\]
+\]$$
 
-\[
+$$\[
 \boxed{320\,GB/s}
-\]
+\]$$
 
 20 GHz'de:
 
-\[
+$$\[
 \boxed{640\,GB/s}
-\]
+\]$$
 
 olur.
 
@@ -993,37 +993,37 @@ olur.
 
 # 19. 8 × 64 mimarisi
 
-\[
+$$\[
 8\times64=512bit
-\]
+\]$$
 
 ve:
 
-\[
+$$\[
 512bit=64byte
-\]
+\]$$
 
 olur.
 
 10 GHz:
 
-\[
+$$\[
 \boxed{640\,GB/s}
-\]
+\]$$
 
 20 GHz:
 
-\[
+$$\[
 \boxed{1.28\,TB/s}
-\]
+\]$$
 
 Burada artık hücrenin kendisinden ziyade:
 
-\[
+$$\[
 \boxed{
 64\times8=512
 }
-\]
+\]$$
 
 adet sense kanalının:
 
@@ -1044,57 +1044,57 @@ Dolayısıyla MOSRAM ölçeklenirken hızın yeni darboğazı hücre değil **I/
 
 Klasik destructive-read yaklaşımında:
 
-\[
+$$\[
 READ
 \rightarrow
 DATA\ LOSS/PERTURBATION
 \rightarrow
 RESTORE
-\]
+\]$$
 
 gerekebilir.
 
 MOSRAM'da hedef:
 
-\[
+$$\[
 READ
 \rightarrow
 CAPACITIVE\ SENSE
 \rightarrow
 LATCH
-\]
+\]$$
 
 olduğundan:
 
-\[
+$$\[
 \boxed{
 READ\rightarrow RESTORE
 }
-\]
+\]$$
 
 işlemi kaldırılabilir.
 
 Gate gerilimi okuma sırasında kullanılmadığı için ideal durumda:
 
-\[
+$$\[
 \Delta Q_G\approx0
-\]
+\]$$
 
 olur.
 
 Dolayısıyla:
 
-\[
+$$\[
 Q_G(t_{read})\approx Q_G(0)
-\]
+\]$$
 
 ve:
 
-\[
+$$\[
 \boxed{
 N_{read}\rightarrow\infty
 }
-\]
+\]$$
 
 teorik olarak mümkün hale gelir.
 
@@ -1108,21 +1108,21 @@ Bu modelde \(R_{limit}\) sürekli olarak gate'i açık tutan eleman değildir.
 
 Yazma sırasında:
 
-\[
+$$\[
 V_{write}
 \rightarrow
 R_{limit}
 \rightarrow
 Q_G
-\]
+\]$$
 
 şeklinde yükleme akımını sınırlar.
 
 Dolayısıyla:
 
-\[
+$$\[
 I_{write}\le I_{max}
-\]
+\]$$
 
 koşulu sağlanır.
 
@@ -1130,11 +1130,11 @@ Gate hedef yüke ulaştığında yazma bağlantısı kesilir.
 
 Bu:
 
-\[
+$$\[
 \boxed{
 R_{limit}=WRITE\ PROTECTION
 }
-\]
+\]$$
 
 anlamına gelir.
 
@@ -1148,24 +1148,24 @@ Burada iki ayrı teknoloji ortaya çıkar.
 
 ### MOSRAM
 
-\[
+$$\[
 \boxed{
 yüksek hız+
 kapasitif okuma+
 kısa/orta retention
 }
-\]
+\]$$
 
 ### MOSRAM-NV
 
-\[
+$$\[
 \boxed{
 yüksek hız+
 kapasitif okuma+
 charge\ trap+
 uzun retention
 }
-\]
+\]$$
 
 İkinci mimaride gate çevresinde daha güçlü bir elektron tuzağı tasarlanabilir.
 
@@ -1173,15 +1173,15 @@ Bu çalışma ayrı tutulmalıdır.
 
 Çünkü RAM için gereksiz derecede güçlü charge trapping kullanmak:
 
-\[
+$$\[
 WRITE\ speed
-\]
+\]$$
 
 ve:
 
-\[
+$$\[
 WRITE\ energy
-\]
+\]$$
 
 açısından dezavantaj oluşturabilir.
 
@@ -1191,78 +1191,78 @@ açısından dezavantaj oluşturabilir.
 
 Araştırmanın ilk prototipi için:
 
-\[
+$$\[
 \boxed{
 A_G=20\times20\,nm^2
 }
-\]
+\]$$
 
 başlangıç değeri önerilebilir.
 
 Prob:
 
-\[
+$$\[
 \boxed{
 A_P=15-20\,nm\times15-20\,nm
 }
-\]
+\]$$
 
 Yalıtkan:
 
-\[
+$$\[
 \boxed{
 d=4-6\,nm
 }
-\]
+\]$$
 
 İlk tarama:
 
-\[
+$$\[
 d=
 3,4,5,6,8,10\,nm
-\]
+\]$$
 
 Gate yükü:
 
-\[
+$$\[
 \boxed{
 N_e=10-100
 }
-\]
+\]$$
 
 Tek elektron:
 
-\[
+$$\[
 \boxed{
 N_e=1
 }
-\]
+\]$$
 
 için yalnızca algılama sınırı testi.
 
 Kontrol:
 
-\[
+$$\[
 \boxed{5-7\,nm}
-\]
+\]$$
 
 Sense bloğu:
 
-\[
+$$\[
 \boxed{64bit}
-\]
+\]$$
 
 İkinci seviye:
 
-\[
+$$\[
 \boxed{4\times64}
-\]
+\]$$
 
 Üçüncü seviye:
 
-\[
+$$\[
 \boxed{8\times64}
-\]
+\]$$
 
 ---
 
@@ -1272,41 +1272,41 @@ MOSRAM'ın optimum geometrisi tek bir değişkenle bulunmamalıdır.
 
 Bir optimizasyon fonksiyonu:
 
-\[
+$$\[
 F=
 \frac{SNR}
 {t_{cycle}\,E_{read}}
-\]
+\]$$
 
 olarak tanımlanabilir.
 
 Kısıtlar:
 
-\[
+$$\[
 SNR\ge SNR_{min}
-\]
+\]$$
 
-\[
+$$\[
 P_{leak}\le P_{max}
-\]
+\]$$
 
-\[
+$$\[
 C_{neighbor}/C_{GP}\le\epsilon
-\]
+\]$$
 
-\[
+$$\[
 \Delta Q_G/Q_G\ll1
-\]
+\]$$
 
 olmalıdır.
 
 Böylece:
 
-\[
+$$\[
 \boxed{
 A_G,\ A_P,\ d,\ N_e,\ R_{sense}
 }
-\]
+\]$$
 
 aynı anda optimize edilir.
 
@@ -1318,13 +1318,13 @@ Bu ilk modelde MOSRAM için **5 nm transistor kullanmak zorunlu değildir.**
 
 Daha doğru mimari:
 
-\[
+$$\[
 \boxed{
 \text{20–30 nm sınıfı optimize edilmiş MOSRAM hücresi}
 +
 \text{5–7 nm kontrol/sense elektroniği}
 }
-\]
+\]$$
 
 olabilir.
 
