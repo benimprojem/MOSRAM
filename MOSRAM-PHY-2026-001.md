@@ -767,8 +767,7 @@ Bu **hücrenin fiziksel sense zamanı**dır.
 Çip düzeyinde:
 
 $$\[
-t_{cycle}
-=
+t_{cycle}=
 t_{address}
 +
 t_{probe}
@@ -1320,8 +1319,7 @@ Daha doğru mimari:
 $$\[
 \boxed{
 \text{20–30 nm sınıfı optimize edilmiş MOSRAM hücresi}
-+
-\text{5–7 nm kontrol/sense elektroniği}
++\text{5–7 nm kontrol/sense elektroniği}
 }
 \]$$
 
