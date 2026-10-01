@@ -182,7 +182,7 @@ Gate gerilim değişimi:
 $$\[
 \Delta V_G=
 \frac{Q_G}{C_G}
-=
+\=
 \frac{N_e e}{C_G}
 \]$$
 
@@ -218,7 +218,7 @@ ise:
 
 $$\[
 \Delta V_G
-=
+\=
 \frac{1.602\times10^{-19}}
 {10\times10^{-18}}
 \]$$
@@ -389,7 +389,7 @@ Daha gerçekçi model:
 $$\[
 \boxed{
 C_{sense}
-=
+\=
 C_{GP}
 +
 C_{fringe}
@@ -563,7 +563,7 @@ olduğunda:
 
 $$\[
 \Delta V_{probe}
-=
+\=
 \alpha\frac{e}{C_G}
 \]$$
 
