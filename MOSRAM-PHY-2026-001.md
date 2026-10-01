@@ -11,14 +11,14 @@ Bu çalışmanın amacı, MOSRAM mimarisinin tek bir bellek hücresinden başlay
 
 Temel mimari:
 
-\[
+$$\[
 \boxed{
 1T\ MOSFET+
 Q_{gate}\ depolama+
 dikey\ kapasitif\ prob+
 tahribatsız\ okuma
 }
-\]
+\]$$
 
 olarak kabul edilir.
 
