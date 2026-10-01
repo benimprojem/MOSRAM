@@ -333,8 +333,7 @@ Bu nedenle ilk prototipte 5 nm fiziksel sınıra zorlanmış gate yerine 20–30
 Prob ile gate arasındaki kapasite:
 
 $$\[
-C_{GP}
-=
+C_{GP}=
 \frac{\epsilon_0\epsilon_r A_{probe}}{d}
 \]$$
 
